@@ -1,2 +1,2 @@
 docling>=0.1.0
-pathlib>=1.0.1 
+pyinstaller>=6.3.0

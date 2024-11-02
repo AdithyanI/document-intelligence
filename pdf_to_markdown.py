@@ -38,3 +38,8 @@ class PdfToMarkdown:
         except Exception as e:
             print(f"Error converting PDF: {str(e)}")
             return None 
+
+if __name__ == "__main__":
+    converter = PdfToMarkdown()
+    markdown_text = converter.convert("http://127.0.0.1:51011/cache/slack_invoice_SBIE-7247905.pdf")
+    print(markdown_text)
