@@ -1,3 +1,7 @@
+import os
+# Set this before importing docling
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # Use only the first GPU
+
 from docling.document_converter import DocumentConverter
 from pathlib import Path
 from typing import Union, Optional
@@ -41,5 +45,5 @@ class PdfToMarkdown:
 
 if __name__ == "__main__":
     converter = PdfToMarkdown()
-    markdown_text = converter.convert("http://127.0.0.1:51011/cache/slack_invoice_SBIE-7247905.pdf")
+    markdown_text = converter.convert("/tmp/slack_invoice_SBIE-7247905.pdf")
     print(markdown_text)
